@@ -1,10 +1,8 @@
 ---
-title: "RR_Assignment1_RE"
-author: "Robert Emberson"
-date: "22 December 2017"
+title: "Reproducible Research: Peer Assessment 1"
 output: 
-  html_document: 
-    keep_md: yes
+  html_document:
+    keep_md: true
 ---
 
 
@@ -37,7 +35,7 @@ tots <- as.vector(tots)
 hist(tots, breaks = 20, col = "red", ylab = "Number of Days", xlab = "Number of steps", main = "Number of Steps per Day")
 ```
 
-![](RR_Assignment1_RE_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
 
 ## Step 4 - mean and median number of steps
 
@@ -76,7 +74,7 @@ aves <- tapply(dat$steps, dat$interval, mean, na.rm = T)
 plot(dat$dT[1:288], aves, type = "l", ylab = "Number of Steps", xlab = "Time")
 ```
 
-![](RR_Assignment1_RE_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
 
 ```r
 ## Which interval is highest?
@@ -122,7 +120,7 @@ tots2 <- as.vector(tots2)
 hist(tots2, breaks = 20, col = "blue", ylab = "Number of Days", xlab = "Number of steps", main = "Number of Steps per Day")
 ```
 
-![](RR_Assignment1_RE_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
 ```r
 mean(tots2)
@@ -162,7 +160,6 @@ t <- ggplot(Plot_dat, aes(interval, steps1)) + geom_line(col = "blue") + facet_g
 print(t)
 ```
 
-![](RR_Assignment1_RE_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
-
+![](PA1_template_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
 
 
